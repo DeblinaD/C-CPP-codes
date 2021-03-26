@@ -59,15 +59,13 @@ int minSteps(int k, int m, int n){
 	}
 }
 
-// main function
 int main(){
 	int num;
-	cin>>num;
-
+	scanf("%d",&num);
 	while(num--){
 		int k,m,n;
-		cin >> k >> m >> n;
-		cout << minSteps(k,m,n)<<endl;
+		scanf("%d%d%d",&k, &m, &n);
+		printf("%d", (minSteps(k,m,n));
 	}
 	return 0;
 }
