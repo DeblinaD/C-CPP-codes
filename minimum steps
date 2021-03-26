@@ -3,7 +3,21 @@
 Multiply k by n
  Decrease k by 2.
  Decrease k by 1.
-You have to perform the above operations to convert the integer from k to m and find the minimum steps.*/
+You have to perform the above operations to convert the integer from k to m and find the minimum steps.
+Sample Input          Sample Output
+2                       3
+3 10 2                  3
+11 6 2 
+
+For test case 1: -                                           For test case 2: 
+
+1) First multple 3 with 2 then                                1) Subtact 2 from 11 , 2 times
+
+2) Subtract 1 from 6 to get 5                                  2) Subtract 1 from 7.
+
+3) Multiple 5 with 2  to get 10.                                So, 3 steps.
+
+So, 3 steps.                                                                         */
 
 
 #include<stdio.h>
