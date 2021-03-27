@@ -1,0 +1,31 @@
+/*Input:  arr[] = {1, 2, 3, 4, 5}
+Output: arr[] = {5, 1, 2, 3, 4}*/
+# include <iostream>
+using namespace std;
+  
+void rotate(int arr[], int n)
+{
+    int x = arr[n - 1], i;
+    for (i = n - 1; i > 0; i--)
+    arr[i] = arr[i - 1];  // here i-1 is done to remove the last element.
+    arr[0] = x; /*here at zeroth index the last value of the array is assigned therefore the
+	last element comes to the first*/ 
+}
+  
+int main() 
+{
+    int arr[] = {1, 2, 3, 4, 5}, i;
+    int n = sizeof(arr) / sizeof(arr[0]); // this gives the total no. of elements in array
+  
+    cout << "Given array is \n";
+    for (i = 0; i < n; i++)
+        cout << arr[i];
+  
+    rotate(arr, n);
+  
+    cout << "\nRotated array is\n";
+    for (i = 0; i < n; i++)
+        cout << arr[i];
+  
+    return 0;
+}
