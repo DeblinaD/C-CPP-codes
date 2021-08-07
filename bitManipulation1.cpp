@@ -1,4 +1,4 @@
-//get bit, set bit, clear bit code
+//get bit, set bit, clear bit and update bit code
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -16,6 +16,12 @@ int clearBit(int n, int pos)
      int mask= ~(1<<pos); //mask is even a particular terminology since we maskate  the particular position where to make zero or one
      return (n & mask);
  }
+ int updatebit(int n, int position, int value)
+ {
+    int mask= ~(1<<position);
+    n = n & mask;
+    return (n | (value<<pos); // value is what we want to update in that desired position. that can be either 1 or 0. 
+ }
 int main()
 {
     cout<<getbit(9,2)<<endl;
@@ -26,4 +32,8 @@ int main()
     
     cout<<clearBit(5,2)<<endl;
     //it gives the output as the number which is finally created. just in this case it gives output 1 since the final anwer is 0001.
+    
+    cout<<updatebit(5,1,1)<<endl;
+    
+    return 0;
 }
