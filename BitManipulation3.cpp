@@ -1,20 +1,25 @@
-/*To check the number of 1s in the binary representation of a number*/
-#include<iostream>
+/*code to write all the subsets of a given set*/
+#include<bits/stdc++.h>
 using namespace std;
 
-int numberofones(int n) 
+void subsets(int array[], int n)
 {
-    int count = 0;
-    while(n!=0)
+    for(int i=0; i<(1<<n); i++) /*this loop runs till 2^n times and (1<<n) means 2^n in bit manipulation*/
     {
-        n= (n & (n-1));
-        count++;
+        for(int j=0; j<n; j++) /*this for loop is for iteratting over the digits*/
+        {
+             if( i & (1<<j)) /*this is as same as get bit*/
+             {
+                 cout<<array[j]<<" ";
+             }
+        }
+        cout<<endl;
     }
-    return count;
 }
 
 int main()
 {
-    cout<<"number of ones is"<<" "<<numberofones(19);
+    int array[4]={1,2,3,4};
+    subsets(array, 4);
     return 0;
 }
